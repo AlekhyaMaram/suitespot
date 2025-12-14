@@ -1,0 +1,87 @@
+/* App.css */
+
+/* Global Reset for box-sizing is often helpful in index.css, 
+   but adding here to be safe */
+   * {
+    box-sizing: border-box;
+  }
+  
+  .app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8fafc; /* slight off-white background */
+    font-family: 'DM Sans', sans-serif;
+  }
+  
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1; /* Lower z-index so dropdowns appear above */
+  }
+  
+  .content-wrapper {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1; /* Lower z-index so dropdowns appear above */
+  }
+  
+  @media (min-width: 768px) {
+    .content-wrapper {
+      padding: 0 2rem;
+    }
+  }
+  
+  /* Headline Section */
+  .headline-section {
+    padding: 2rem 0 1.5rem 0;
+  }
+  
+  .page-title {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 800;
+    color: #0f172a; /* slate-900 */
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.025em;
+  }
+  
+  @media (min-width: 768px) {
+    .page-title {
+      font-size: 1.875rem; /* 30px */
+    }
+  }
+  
+  .page-subtitle {
+    font-size: 1rem;
+    color: #64748b; /* slate-500 */
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  /* Grid Layout */
+  .dorm-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-bottom: 4rem;
+  }
+  
+  /* Tablet: 2 columns */
+  @media (min-width: 640px) {
+    .dorm-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Desktop: 3 columns */
+  @media (min-width: 1024px) {
+    .dorm-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+  }
